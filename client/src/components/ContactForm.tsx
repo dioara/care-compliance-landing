@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader2, Send } from "lucide-react";
 import { toast } from "sonner";
@@ -12,6 +13,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "Sales Inquiry",
     message: ""
   });
 
@@ -33,12 +35,12 @@ export default function ContactForm() {
     // 3. Trigger the email send here using the service's SDK or fetch API
     // Example with EmailJS:
     // emailjs.send('service_id', 'template_id', { to_email: formData.email, to_name: formData.name })
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", subject: "Sales Inquiry", message: "" });
     setIsSubmitting(false);
   };
 
   return (
-    <section className="py-16 bg-slate-50">
+    <section id="contact" className="py-16 bg-slate-50">
       <div className="container max-w-2xl">
         <Card className="border-none shadow-lg">
           <CardHeader className="text-center">
@@ -71,6 +73,25 @@ export default function ContactForm() {
                     required
                   />
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="subject">Subject</Label>
+                <Select 
+                  value={formData.subject} 
+                  onValueChange={(value) => setFormData({ ...formData, subject: value })}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a topic" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Sales Inquiry">Sales Inquiry</SelectItem>
+                    <SelectItem value="Product Support">Product Support</SelectItem>
+                    <SelectItem value="Billing Question">Billing Question</SelectItem>
+                    <SelectItem value="Partnership">Partnership</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               
               <div className="space-y-2">
