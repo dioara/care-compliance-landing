@@ -11,28 +11,28 @@ const tourSteps = [
     id: "dashboard",
     title: "Compliance Dashboard",
     description: "Get a bird's-eye view of your organisation's compliance status. Track real-time scores, upcoming audits, and critical alerts in one place.",
-    image: "/images/demo-dashboard.png",
+    image: "/images/demo-dashboard.webp",
     features: ["Real-time compliance score", "Upcoming audit reminders", "Critical alert notifications"]
   },
   {
     id: "audits",
     title: "Digital Audits",
     description: "Ditch the paper. Complete CQC-aligned audits directly on any device. Our smart forms guide you through every check to ensure nothing is missed.",
-    image: "/images/demo-audits.png",
+    image: "/images/demo-audits.webp",
     features: ["CQC-aligned templates", "Mobile-friendly forms", "Auto-save progress"]
   },
   {
     id: "staff",
     title: "Staff Compliance",
     description: "Never miss a DBS renewal again. Track employment checks, training certificates, and mandatory documents for every staff member.",
-    image: "/images/demo-staff.png",
+    image: "/images/demo-staff.webp",
     features: ["DBS expiry tracking", "Document storage", "Role-based requirements"]
   },
   {
     id: "reports",
     title: "Analytics & Reporting",
     description: "Prove your compliance to inspectors with one click. Generate detailed reports on audit performance, staff compliance trends, and incident history.",
-    image: "/images/demo-reports.png",
+    image: "/images/demo-reports.webp",
     features: ["One-click CQC reports", "Trend analysis", "Export to PDF/Excel"]
   }
 ];

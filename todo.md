@@ -59,3 +59,7 @@
 - [ ] Create `ProductTour.tsx` page with interactive "click-through" steps
 - [ ] Update `ContactForm.tsx` to show "Confirmation email sent" success message
 - [ ] Add "Watch Demo" link to Header and Hero CTA
+- [ ] Log in to `app.ccms.co.uk` with provided credentials
+- [ ] Capture screenshots of Dashboard, Audits, Staff, and Reports pages
+- [ ] Create animated GIFs from the screenshots
+- [ ] Update `ProductTour.tsx` and `Hero.tsx` with real images
