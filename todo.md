@@ -1,0 +1,22 @@
+# Landing Page Updates
+
+- [ ] Update all "Start Free Trial" and "Login" links to `https://app.ccms.co.uk/register` and `https://app.ccms.co.uk`
+- [ ] Update Pricing section to strictly match `server/stripe/products.ts` logic:
+    - Base: £70/license/month
+    - 1-5 licenses: Full price
+    - 6-10 licenses: 10% discount (£63)
+    - 11-20 licenses: 15% discount (£59.50)
+    - 21+ licenses: 20% discount (£56)
+    - Annual billing: Additional 15% discount on top of volume discounts
+- [ ] Expand Features section to include all items from `todo.md` in the repo:
+    - 22 Service User compliance sections
+    - 7 Staff compliance sections
+    - 25 Audit types
+    - Incident reporting with CQC notifications
+    - AI Audits (Care plans & Staff notes)
+    - RAG Status Dashboard
+    - Multi-location management
+    - Role-based access (Admin, Manager, Staff)
+- [ ] Ensure British English spelling is maintained
+- [ ] Change "care homes" to "care businesses" (supported living, domiciliary care, etc.)
+- [ ] Add "Built by Lampstand Consulting Ltd" with link to `https://lampstand.consulting` in Footer

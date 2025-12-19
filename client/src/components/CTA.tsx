@@ -15,12 +15,12 @@ export default function CTA() {
           Ready to simplify your compliance?
         </h2>
         <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Join hundreds of care homes improving their CQC ratings with our all-in-one platform. Start your 30-day free trial today.
+          Join hundreds of care businesses improving their CQC ratings with our all-in-one platform. Start your 30-day free trial today.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="rounded-full text-lg px-8 h-14 bg-white text-primary hover:bg-blue-50 shadow-xl" asChild>
-            <a href="https://app.carecompliance.com/register">
+            <a href="https://app.ccms.co.uk/register">
               Get Started for Free
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>

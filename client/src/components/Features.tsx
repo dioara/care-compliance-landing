@@ -4,7 +4,10 @@ import {
   BarChart3, 
   Users, 
   Shield, 
-  Clock 
+  Clock,
+  Building2,
+  Lock,
+  FileText
 } from "lucide-react";
 
 const features = [
@@ -12,37 +15,67 @@ const features = [
     icon: ClipboardCheck,
     title: "Comprehensive Audits",
     description: "Access 25+ built-in audit templates covering all CQC domains. Schedule, conduct, and track audits effortlessly.",
-    image: "/images/feature-audit.png"
+    image: "/images/feature-audit.png",
+    benefits: [
+      "25+ specialized audit types",
+      "Automated scheduling & reminders",
+      "Evidence upload & digital signatures"
+    ]
   },
   {
     icon: BrainCircuit,
     title: "AI-Powered Analysis",
     description: "Upload care plans and staff notes for instant AI analysis. Identify gaps and improve quality automatically.",
-    image: "/images/feature-ai.png"
+    image: "/images/feature-ai.png",
+    benefits: [
+      "Instant care plan analysis",
+      "Staff note quality checks",
+      "Automated improvement suggestions"
+    ]
   },
   {
     icon: BarChart3,
     title: "Real-time Reporting",
     description: "Visualize compliance status with RAG (Red, Amber, Green) indicators. Generate detailed reports in seconds.",
-    image: "/images/feature-reporting.png"
+    image: "/images/feature-reporting.png",
+    benefits: [
+      "Live RAG status dashboard",
+      "CQC-ready compliance reports",
+      "Trend analysis & benchmarking"
+    ]
   }
 ];
 
 const additionalFeatures = [
   {
     icon: Users,
-    title: "Staff Management",
-    description: "Track training, supervision, and compliance for all staff members in one place."
+    title: "Staff Compliance",
+    description: "Track training, supervision, and compliance across 7 key staff domains including recruitment and appraisals."
+  },
+  {
+    icon: FileText,
+    title: "Service User Compliance",
+    description: "Monitor 22 critical service user compliance sections, from care plans to risk assessments."
   },
   {
     icon: Shield,
-    title: "Incident Tracking",
-    description: "Log and monitor incidents with a robust system that links directly to CQC notifications."
+    title: "Incident Management",
+    description: "Log incidents with automatic CQC notification triggers and comprehensive investigation tracking."
+  },
+  {
+    icon: Building2,
+    title: "Multi-Location Support",
+    description: "Manage multiple sites from a single dashboard with location-specific reporting and oversight."
+  },
+  {
+    icon: Lock,
+    title: "Role-Based Access",
+    description: "Secure access controls for Admins, Managers, and Staff to ensure data privacy and appropriate oversight."
   },
   {
     icon: Clock,
     title: "Automated Scheduling",
-    description: "Never miss a deadline with automated reminders for upcoming audits and renewals."
+    description: "Never miss a deadline with smart automated reminders for upcoming audits, renewals, and tasks."
   }
 ];
 
@@ -55,7 +88,7 @@ export default function Features() {
             Everything you need for <span className="text-gradient">CQC excellence</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our platform brings together all aspects of care compliance into one intuitive system, designed specifically for UK care homes.
+            Our platform brings together all aspects of care compliance into one intuitive system, designed specifically for UK care businesses.
           </p>
         </div>
 
@@ -71,10 +104,10 @@ export default function Features() {
                   {feature.description}
                 </p>
                 <ul className="space-y-3">
-                  {[1, 2, 3].map((i) => (
+                  {feature.benefits.map((benefit, i) => (
                     <li key={i} className="flex items-center gap-3 text-foreground/80">
                       <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                      <span>Feature benefit point {i} goes here</span>
+                      <span>{benefit}</span>
                     </li>
                   ))}
                 </ul>

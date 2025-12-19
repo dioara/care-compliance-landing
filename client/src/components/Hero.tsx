@@ -16,7 +16,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-heading font-bold tracking-tight text-foreground leading-[1.1]">
-              Compliance made <span className="text-gradient">simple</span> for care homes.
+              Compliance made <span className="text-gradient">simple</span> for care businesses.
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
@@ -25,7 +25,7 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="rounded-full text-lg px-8 h-14 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all" asChild>
-                <a href="https://app.carecompliance.com/register">
+                <a href="https://app.ccms.co.uk/register">
                   Start 30-Day Free Trial
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
@@ -46,7 +46,7 @@ export default function Hero() {
                   <span>Cancel anytime</span>
                 </div>
               </div>
-              <p className="text-xs opacity-70">Join 500+ UK care organisations trusting our platform</p>
+              <p className="text-xs opacity-70">Join 500+ UK care businesses trusting our platform</p>
             </div>
           </div>
           

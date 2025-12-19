@@ -12,7 +12,7 @@ export default function Footer() {
               <span>Care Compliance</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Simplifying CQC compliance for UK care homes. Our comprehensive system helps you manage audits, staff training, and incidents with ease.
+              Simplifying CQC compliance for UK care businesses. Our comprehensive system helps you manage audits, staff training, and incidents with ease.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -63,7 +63,7 @@ export default function Footer() {
 
         <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Care Compliance System. All rights reserved.
+            &copy; {new Date().getFullYear()} Care Compliance System. All rights reserved. Built by <a href="https://lampstand.consulting" className="hover:text-primary transition-colors">Lampstand Consulting Ltd</a>.
           </p>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Mail className="h-4 w-4" />

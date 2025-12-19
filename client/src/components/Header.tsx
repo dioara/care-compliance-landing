@@ -51,11 +51,11 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <a href="https://app.carecompliance.com/login" className="text-sm font-medium text-muted-foreground hover:text-primary">
+          <a href="https://app.ccms.co.uk" className="text-sm font-medium text-muted-foreground hover:text-primary">
             Log in
           </a>
           <Button asChild className="rounded-full px-6">
-            <a href="https://app.carecompliance.com/register">Start Free Trial</a>
+            <a href="https://app.ccms.co.uk/register">Start Free Trial</a>
           </Button>
         </div>
 
@@ -86,10 +86,10 @@ export default function Header() {
               </nav>
               <div className="flex flex-col gap-4">
                 <Button variant="outline" asChild className="w-full justify-center">
-                  <a href="https://app.carecompliance.com/login">Log in</a>
+                  <a href="https://app.ccms.co.uk">Log in</a>
                 </Button>
                 <Button asChild className="w-full justify-center">
-                  <a href="https://app.carecompliance.com/register">Start Free Trial</a>
+                  <a href="https://app.ccms.co.uk/register">Start Free Trial</a>
                 </Button>
               </div>
             </div>

@@ -16,20 +16,26 @@ export default function Pricing() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Monthly Plan */}
+          {/* Standard Plan */}
           <div className="relative p-8 rounded-3xl bg-white border border-border shadow-sm hover:shadow-xl transition-all duration-300">
             <div className="mb-8">
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Monthly License</h3>
+              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Standard License</h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-bold text-foreground">£70</span>
                 <span className="text-muted-foreground">/license/month</span>
               </div>
               <p className="text-sm text-muted-foreground mt-4">
-                Perfect for smaller care homes getting started with digital compliance.
+                Perfect for smaller care businesses getting started with digital compliance.
               </p>
             </div>
             
             <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3">
+                <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                  <Check className="h-3 w-3" />
+                </div>
+                <span className="text-sm text-foreground/80">1-5 licenses</span>
+              </div>
               <div className="flex items-center gap-3">
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                   <Check className="h-3 w-3" />
@@ -42,35 +48,29 @@ export default function Pricing() {
                 </div>
                 <span className="text-sm text-foreground/80">Unlimited audits</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
-                  <Check className="h-3 w-3" />
-                </div>
-                <span className="text-sm text-foreground/80">Standard support</span>
-              </div>
             </div>
             
             <Button className="w-full rounded-xl" variant="outline" asChild>
-              <a href="https://app.carecompliance.com/register">Start Monthly</a>
+              <a href="https://app.ccms.co.uk/register">Start Monthly</a>
             </Button>
           </div>
 
           {/* Volume Plan - Highlighted */}
           <div className="relative p-8 rounded-3xl bg-white border-2 border-primary shadow-2xl transform scale-105 z-10">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-              Most Popular
+              Volume Discounts
             </div>
             <div className="mb-8">
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Volume Discount</h3>
+              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Growing Business</h3>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-foreground">£63</span>
+                <span className="text-4xl font-bold text-foreground">£56</span>
                 <span className="text-muted-foreground">/license/month</span>
               </div>
               <p className="text-sm text-green-600 font-medium mt-2">
-                Save 10-20% per license
+                Save up to 20% per license
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                For growing organizations with 6+ licenses.
+                Automatic discounts applied as you grow.
               </p>
             </div>
             
@@ -79,14 +79,8 @@ export default function Pricing() {
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                   <Check className="h-3 w-3" />
                 </div>
-                <span className="text-sm text-foreground/80">Everything in Monthly</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
-                  <Check className="h-3 w-3" />
-                </div>
                 <span className="text-sm text-foreground/80">
-                  <span className="font-semibold">10% off</span> for 6-10 licenses
+                  <span className="font-semibold">10% off (£63)</span> for 6-10 licenses
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -94,7 +88,7 @@ export default function Pricing() {
                   <Check className="h-3 w-3" />
                 </div>
                 <span className="text-sm text-foreground/80">
-                  <span className="font-semibold">15% off</span> for 11-20 licenses
+                  <span className="font-semibold">15% off (£59.50)</span> for 11-20 licenses
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -102,13 +96,13 @@ export default function Pricing() {
                   <Check className="h-3 w-3" />
                 </div>
                 <span className="text-sm text-foreground/80">
-                  <span className="font-semibold">20% off</span> for 21+ licenses
+                  <span className="font-semibold">20% off (£56)</span> for 21+ licenses
                 </span>
               </div>
             </div>
             
             <Button className="w-full rounded-xl h-12 text-lg shadow-lg shadow-primary/20" asChild>
-              <a href="https://app.carecompliance.com/register">Start Free Trial</a>
+              <a href="https://app.ccms.co.uk/register">Start Free Trial</a>
             </Button>
             <p className="text-xs text-center text-muted-foreground mt-4">30-day free trial • No card required</p>
           </div>
@@ -118,14 +112,14 @@ export default function Pricing() {
             <div className="mb-8">
               <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Annual Billing</h3>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-foreground">£59.50</span>
+                <span className="text-4xl font-bold text-foreground">£47.60</span>
                 <span className="text-muted-foreground">/license/mo</span>
               </div>
               <p className="text-sm text-green-600 font-medium mt-2">
                 Save additional 15%
               </p>
               <p className="text-sm text-muted-foreground mt-2">
-                Commit annually and get 2 months free equivalent.
+                Pay annually for maximum savings.
               </p>
             </div>
             
@@ -140,7 +134,7 @@ export default function Pricing() {
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                   <Check className="h-3 w-3" />
                 </div>
-                <span className="text-sm text-foreground/80">Combines with volume discounts</span>
+                <span className="text-sm text-foreground/80">Stacks with volume discounts</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
@@ -151,7 +145,7 @@ export default function Pricing() {
             </div>
             
             <Button className="w-full rounded-xl" variant="outline" asChild>
-              <a href="https://app.carecompliance.com/register">Contact Sales</a>
+              <a href="https://app.ccms.co.uk/register">Contact Sales</a>
             </Button>
           </div>
         </div>
