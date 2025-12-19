@@ -1,0 +1,101 @@
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, ShieldCheck } from "lucide-react";
+import { useState } from "react";
+import { Link, useLocation } from "wouter";
+
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
+
+  const navItems = [
+    { name: "Features", href: "#features" },
+    { name: "Solutions", href: "#solutions" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Resources", href: "#resources" },
+  ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 font-heading font-bold text-xl text-primary">
+            <ShieldCheck className="h-8 w-8" />
+            <span>Care Compliance</span>
+          </Link>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.href);
+              }}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden md:flex items-center gap-4">
+          <a href="https://app.carecompliance.com/login" className="text-sm font-medium text-muted-foreground hover:text-primary">
+            Log in
+          </a>
+          <Button asChild className="rounded-full px-6">
+            <a href="https://app.carecompliance.com/register">Start Free Trial</a>
+          </Button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild className="md:hidden">
+            <Button variant="ghost" size="icon">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right">
+            <div className="flex flex-col gap-8 mt-8">
+              <nav className="flex flex-col gap-4">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }}
+                    className="text-lg font-medium text-muted-foreground hover:text-primary"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </nav>
+              <div className="flex flex-col gap-4">
+                <Button variant="outline" asChild className="w-full justify-center">
+                  <a href="https://app.carecompliance.com/login">Log in</a>
+                </Button>
+                <Button asChild className="w-full justify-center">
+                  <a href="https://app.carecompliance.com/register">Start Free Trial</a>
+                </Button>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
+  );
+}
