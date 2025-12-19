@@ -50,3 +50,6 @@
     - [ ] Handle form submission (mock or real) and initiate download
 - [ ] Re-examine `server/stripe/products.ts` and `client/src/pages/SubscriptionManagement.tsx` for exact pricing
 - [ ] Update `Pricing.tsx` with correct monthly and annual costs
+- [ ] Verify definition of "license" in codebase (per user, per location, or per staff member?)
+- [ ] Create `FAQ.tsx` component with questions about licensing, data security, and onboarding
+- [ ] Add FAQ section to `Home.tsx` below Pricing
