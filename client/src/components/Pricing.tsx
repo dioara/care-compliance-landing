@@ -144,7 +144,10 @@ export default function Pricing() {
             </div>
             
             <Button className="w-full rounded-xl" variant="outline" asChild>
-              <a href="https://app.ccms.co.uk/register">Contact Sales</a>
+              <a href="#contact" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}>Contact Sales</a>
             </Button>
           </div>
         </div>
@@ -156,7 +159,10 @@ export default function Pricing() {
               <span className="text-sm">Need a custom enterprise plan?</span>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href="mailto:sales@ccms.co.uk" className="text-primary font-medium hover:underline">Contact our sales team</a>
+                  <a href="#contact" onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }} className="text-primary font-medium hover:underline">Contact our sales team</a>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>For organisations with 50+ licences</p>
