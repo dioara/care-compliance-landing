@@ -9,10 +9,10 @@ export default function Header() {
   const [location] = useLocation();
 
   const navItems = [
-    { name: "Features", href: "#features" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Resources", href: "#resources" },
+    { name: "Features", href: "/#features" },
+    { name: "Solutions", href: "/#solutions" },
+    { name: "Pricing", href: "/#pricing" },
+    { name: "Resources", href: "/resources" },
   ];
 
   const scrollToSection = (id: string) => {

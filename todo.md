@@ -27,3 +27,18 @@
 - [ ] Ensure `app.ccms.co.uk` is used for app links (login/register)
 - [ ] Update email addresses to `@ccms.co.uk`
 - [ ] Review all content for British English spelling (e.g., organisation, optimise, programme, centre, licence vs license)
+- [ ] Research standard CQC compliance templates (Hospital Passport, Right to Work, Care Plans, Risk Assessments, etc.)
+- [ ] Generate PDF versions of these templates and save to `client/public/documents/`
+- [ ] Create `Resources.tsx` page with articles and download links
+- [ ] Implement GDPR-compliant Cookie Consent Banner component
+- [ ] Add "Resources" link to Header and Footer
+- [ ] Generate additional PDF templates:
+    - [ ] Risk Assessment Form
+    - [ ] Infection Control Audit
+    - [ ] Medication Administration Record (MAR) Chart
+    - [ ] Staff Induction Checklist
+    - [ ] Service User Feedback Form
+    - [ ] Incident Report Form
+    - [ ] Fire Safety Checklist
+    - [ ] Mental Capacity Assessment Form
+- [ ] Update `Resources.tsx` to include all new templates
