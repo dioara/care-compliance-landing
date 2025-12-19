@@ -25,7 +25,14 @@ export default function ContactForm() {
     // TODO: Connect to actual support ticket system API
     console.log("Support request:", formData);
 
-    toast.success("Message sent! Our support team will be in touch shortly.");
+    toast.success(`Message sent! A confirmation email has been sent to ${formData.email}.`);
+    
+    // NOTE: To implement real auto-response emails:
+    // 1. Use a service like EmailJS, Formspree, or your own backend API
+    // 2. In your email template, include a variable for the user's name: {{name}}
+    // 3. Trigger the email send here using the service's SDK or fetch API
+    // Example with EmailJS:
+    // emailjs.send('service_id', 'template_id', { to_email: formData.email, to_name: formData.name })
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
   };

@@ -55,3 +55,7 @@
 - [ ] Add FAQ section to `Home.tsx` below Pricing
 - [ ] Create `ContactForm.tsx` component with name, email, and message fields
 - [ ] Add `ContactForm` to `Home.tsx` below FAQ section
+- [ ] Generate 3-4 high-fidelity screenshots for the product tour (Dashboard, Audits, Staff, Reports)
+- [ ] Create `ProductTour.tsx` page with interactive "click-through" steps
+- [ ] Update `ContactForm.tsx` to show "Confirmation email sent" success message
+- [ ] Add "Watch Demo" link to Header and Hero CTA

@@ -13,13 +13,18 @@ export default function Header() {
     { name: "Solutions", href: "/#solutions" },
     { name: "Pricing", href: "/#pricing" },
     { name: "Resources", href: "/resources" },
+    { name: "Watch Demo", href: "/demo" },
   ];
 
-  const scrollToSection = (id: string) => {
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
+  const scrollToSection = (href: string) => {
+    if (href.startsWith("/#")) {
+      const element = document.querySelector(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false);
+      }
+    } else {
+      window.location.href = href;
     }
   };
 

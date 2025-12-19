@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Hero() {
   return (
@@ -31,7 +32,7 @@ export default function Hero() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="rounded-full text-lg px-8 h-14 bg-white/50 backdrop-blur-sm hover:bg-white/80" asChild>
-                <a href="#demo">Watch Demo</a>
+                <Link href="/demo">Watch Demo</Link>
               </Button>
             </div>
             
