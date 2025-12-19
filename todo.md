@@ -63,3 +63,10 @@
 - [ ] Capture screenshots of Dashboard, Audits, Staff, and Reports pages
 - [ ] Create animated GIFs from the screenshots
 - [ ] Update `ProductTour.tsx` and `Hero.tsx` with real images
+- [ ] Remove `ProductTour.tsx` page
+- [ ] Remove "Watch Demo" link from `Header.tsx`
+- [ ] Remove "Watch Demo" button from `Hero.tsx`
+- [ ] Remove `/demo` route from `App.tsx`
+- [ ] Verify all links in `Footer.tsx` (Lampstand, Privacy, Terms, etc.)
+- [ ] Verify all links in `Header.tsx` (Login, Register, Resources)
+- [ ] Verify all links in `CTA.tsx` and `Pricing.tsx`

@@ -7,7 +7,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Resources from "./pages/Resources";
-import ProductTour from "./pages/ProductTour";
+
 
 
 function Router() {
@@ -15,7 +15,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path="/resources" component={Resources} />
-      <Route path="/demo" component={ProductTour} />
+      
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

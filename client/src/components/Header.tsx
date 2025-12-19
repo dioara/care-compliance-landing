@@ -13,18 +13,33 @@ export default function Header() {
     { name: "Solutions", href: "/#solutions" },
     { name: "Pricing", href: "/#pricing" },
     { name: "Resources", href: "/resources" },
-    { name: "Watch Demo", href: "/demo" },
   ];
 
   const scrollToSection = (href: string) => {
     if (href.startsWith("/#")) {
-      const element = document.querySelector(href.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setIsOpen(false);
+      // If we are on the home page, scroll to section
+      if (location === "/") {
+        const element = document.querySelector(href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          setIsOpen(false);
+          return;
+        }
       }
-    } else {
+      // Otherwise navigate to the page
       window.location.href = href;
+    } else {
+      // Handle standard links (like /resources)
+      if (href.startsWith("/")) {
+        // Use wouter navigation for internal links to avoid full reload if possible, 
+        // but window.location.href is safer for mixed anchor/path logic. 
+        // For simplicity and consistency with the anchor logic above, we'll use window.location.href 
+        // or just let the default anchor behavior happen if we didn't preventDefault.
+        // However, the onClick prevents default.
+        window.location.href = href;
+      } else {
+        window.location.href = href;
+      }
     }
   };
 

@@ -31,9 +31,7 @@ export default function Hero() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full text-lg px-8 h-14 bg-white/50 backdrop-blur-sm hover:bg-white/80" asChild>
-                <Link href="/demo">Watch Demo</Link>
-              </Button>
+
             </div>
             
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
