@@ -144,9 +144,11 @@ export default function Pricing() {
             </div>
             
             <Button className="w-full rounded-xl" variant="outline" asChild>
-              <a href="#contact" onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              <a href="/#contact" onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }
               }}>Contact Sales</a>
             </Button>
           </div>
@@ -159,9 +161,11 @@ export default function Pricing() {
               <span className="text-sm">Need a custom enterprise plan?</span>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href="#contact" onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  <a href="/#contact" onClick={(e) => {
+                    if (window.location.pathname === '/') {
+                      e.preventDefault();
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    }
                   }} className="text-primary font-medium hover:underline">Contact our sales team</a>
                 </TooltipTrigger>
                 <TooltipContent>

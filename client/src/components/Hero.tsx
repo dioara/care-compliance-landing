@@ -58,7 +58,7 @@ export default function Hero() {
               {/* Main Hero Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50 glass-card transform transition-transform hover:scale-[1.02] duration-500">
                 <img 
-                  src="/images/demo-dashboard.webp" 
+                  src="/images/dashboard-hero-sharp.png" 
                   alt="Care Compliance Dashboard" 
                   className="w-full h-full object-cover"
                 />

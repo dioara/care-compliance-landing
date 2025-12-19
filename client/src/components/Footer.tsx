@@ -33,8 +33,8 @@ export default function Footer() {
           <div>
             <h3 className="font-heading font-semibold text-foreground mb-4">Product</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#features" className="text-muted-foreground hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a></li>
+              <li><a href="/#features" className="text-muted-foreground hover:text-primary transition-colors">Features</a></li>
+              <li><a href="/#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Updates</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Security</a></li>
             </ul>
@@ -46,7 +46,12 @@ export default function Footer() {
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/#contact" onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }} className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
 
