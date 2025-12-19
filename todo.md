@@ -48,3 +48,5 @@
     - [ ] Display template thumbnails
     - [ ] Trigger `LeadCaptureDialog` on download click
     - [ ] Handle form submission (mock or real) and initiate download
+- [ ] Re-examine `server/stripe/products.ts` and `client/src/pages/SubscriptionManagement.tsx` for exact pricing
+- [ ] Update `Pricing.tsx` with correct monthly and annual costs

@@ -112,14 +112,13 @@ export default function Pricing() {
             <div className="mb-8">
               <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Annual Billing</h3>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-foreground">£47.60</span>
+                <span className="text-4xl font-bold text-foreground">£59.50</span>
                 <span className="text-muted-foreground">/licence/mo</span>
               </div>
-              <p className="text-sm text-green-600 font-medium mt-2">
-                Save additional 15%
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Pay annually for maximum savings.
+           <span className="text-sm text-green-600 font-medium mt-2">
+                Save additional 15% annually
+              </span>            <p className="text-sm text-muted-foreground mt-2">
+                Base price £59.50/mo when billed annually (£70 * 0.85).
               </p>
             </div>
             
@@ -128,13 +127,13 @@ export default function Pricing() {
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                   <Check className="h-3 w-3" />
                 </div>
-                <span className="text-sm text-foreground/80">Best value for money</span>
+                <span className="text-sm text-foreground/80">15% discount on annual billing</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                   <Check className="h-3 w-3" />
                 </div>
-                <span className="text-sm text-foreground/80">Stacks with volume discounts</span>
+                <span className="text-sm text-foreground/80">Stacks with volume discounts (e.g. 21+ users = £47.60/mo)</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
