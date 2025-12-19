@@ -1,16 +1,21 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, Download, BookOpen, ShieldCheck, CheckCircle, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LeadCaptureDialog from "@/components/LeadCaptureDialog";
 
 export default function Resources() {
+  const [selectedTemplate, setSelectedTemplate] = useState<{ title: string; url: string } | null>(null);
+
   const templates = [
     {
       title: "Hospital Passport Template",
       description: "A comprehensive document to ensure continuity of care when a service user is admitted to hospital. Includes sections for medical history, communication needs, and personal preferences.",
       icon: FileText,
       downloadUrl: "/documents/hospital_passport_template.pdf",
+      thumbnail: "/images/templates/hospital_passport_template.png",
       category: "Care Management"
     },
     {
@@ -18,6 +23,7 @@ export default function Resources() {
       description: "Essential checklist for UK employers to verify staff eligibility. Covers acceptable documents (List A & B) and the 3-step check process to prevent illegal working.",
       icon: ShieldCheck,
       downloadUrl: "/documents/right_to_work_checklist.pdf",
+      thumbnail: "/images/templates/right_to_work_checklist.png",
       category: "HR & Compliance"
     },
     {
@@ -25,6 +31,7 @@ export default function Resources() {
       description: "CQC-compliant care plan template focusing on individual needs, risks, and goals. Perfect for structuring resident care documentation.",
       icon: CheckCircle,
       downloadUrl: "/documents/care_plan_template.pdf",
+      thumbnail: "/images/templates/care_plan_template.png",
       category: "Care Planning"
     },
     {
@@ -32,6 +39,7 @@ export default function Resources() {
       description: "Standardised risk assessment template to identify hazards, evaluate risks, and implement control measures for service users or environments.",
       icon: ShieldCheck,
       downloadUrl: "/documents/risk_assessment_template.pdf",
+      thumbnail: "/images/templates/risk_assessment_template.png",
       category: "Safety"
     },
     {
@@ -39,6 +47,7 @@ export default function Resources() {
       description: "Comprehensive checklist for auditing infection prevention and control standards, covering hand hygiene, PPE, and environmental cleanliness.",
       icon: CheckCircle,
       downloadUrl: "/documents/infection_control_audit.pdf",
+      thumbnail: "/images/templates/infection_control_audit.png",
       category: "Audits"
     },
     {
@@ -46,6 +55,7 @@ export default function Resources() {
       description: "Medication Administration Record chart for accurate tracking of medication administration, ensuring safety and compliance.",
       icon: FileText,
       downloadUrl: "/documents/mar_chart_template.pdf",
+      thumbnail: "/images/templates/mar_chart_template.png",
       category: "Medication"
     },
     {
@@ -53,6 +63,7 @@ export default function Resources() {
       description: "Structured induction checklist to ensure new staff receive all necessary training, policy reviews, and introductions during their first weeks.",
       icon: Users,
       downloadUrl: "/documents/staff_induction_checklist.pdf",
+      thumbnail: "/images/templates/staff_induction_checklist.png",
       category: "HR & Compliance"
     },
     {
@@ -60,9 +71,25 @@ export default function Resources() {
       description: "Formal template for recording accidents and incidents, including details of injuries, witnesses, and immediate actions taken.",
       icon: ShieldCheck,
       downloadUrl: "/documents/incident_report_form.pdf",
+      thumbnail: "/images/templates/incident_report_form.png",
       category: "Safety"
     }
   ];
+
+  const handleDownloadClick = (template: typeof templates[0]) => {
+    setSelectedTemplate({ title: template.title, url: template.downloadUrl });
+  };
+
+  const handleDownloadSuccess = () => {
+    if (selectedTemplate) {
+      const link = document.createElement('a');
+      link.href = selectedTemplate.url;
+      link.download = selectedTemplate.url.split('/').pop() || 'download';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
 
   const articles = [
     {
@@ -114,15 +141,23 @@ export default function Resources() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {templates.map((template, index) => (
-                <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="mb-4">
-                      <span className="px-3 py-1 rounded-full bg-slate-100 text-xs font-medium text-muted-foreground">
+                <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                  <div className="h-48 bg-slate-100 relative group overflow-hidden border-b border-border/50">
+                    <img 
+                      src={template.thumbnail} 
+                      alt={`${template.title} Preview`} 
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                    <div className="absolute top-3 left-3">
+                      <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-foreground shadow-sm">
                         {template.category}
                       </span>
                     </div>
+                  </div>
+                  <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-xl">
-                      <template.icon className="h-5 w-5 text-primary" />
+                      <template.icon className="h-5 w-5 text-primary shrink-0" />
                       {template.title}
                     </CardTitle>
                   </CardHeader>
@@ -130,11 +165,12 @@ export default function Resources() {
                     <CardDescription className="text-base mb-6 flex-1">
                       {template.description}
                     </CardDescription>
-                    <Button className="w-full gap-2" asChild>
-                      <a href={template.downloadUrl} download>
-                        <Download className="h-4 w-4" />
-                        Download PDF
-                      </a>
+                    <Button 
+                      className="w-full gap-2" 
+                      onClick={() => handleDownloadClick(template)}
+                    >
+                      <Download className="h-4 w-4" />
+                      Download PDF
                     </Button>
                   </CardContent>
                 </Card>
@@ -183,6 +219,13 @@ export default function Resources() {
       </main>
 
       <Footer />
+      
+      <LeadCaptureDialog 
+        isOpen={!!selectedTemplate}
+        onClose={() => setSelectedTemplate(null)}
+        onSuccess={handleDownloadSuccess}
+        resourceTitle={selectedTemplate?.title || ""}
+      />
     </div>
   );
 }

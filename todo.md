@@ -42,3 +42,9 @@
     - [ ] Fire Safety Checklist
     - [ ] Mental Capacity Assessment Form
 - [ ] Update `Resources.tsx` to include all new templates
+- [ ] Generate thumbnail images (PNG) for all 8 PDF templates
+- [ ] Create `LeadCaptureDialog` component for email collection
+- [ ] Update `Resources.tsx` to:
+    - [ ] Display template thumbnails
+    - [ ] Trigger `LeadCaptureDialog` on download click
+    - [ ] Handle form submission (mock or real) and initiate download
