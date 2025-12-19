@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, Download, BookOpen, ShieldCheck, CheckCircle, Users } from "lucide-react";
@@ -73,6 +74,46 @@ export default function Resources() {
       downloadUrl: "/documents/incident_report_form.pdf",
       thumbnail: "/images/templates/incident_report_form.png",
       category: "Safety"
+    },
+    {
+      title: "Spot Check Record",
+      description: "Template for conducting unannounced spot checks on staff performance, covering dignity, safety, and adherence to care plans.",
+      icon: CheckCircle,
+      downloadUrl: "/documents/spot_check_record.pdf",
+      thumbnail: "/images/templates/spot_check_record.png",
+      category: "Quality Assurance"
+    },
+    {
+      title: "Supervision Record",
+      description: "Formal record for staff supervision sessions, including discussion points, actions agreed, and performance feedback.",
+      icon: Users,
+      downloadUrl: "/documents/supervision_record.pdf",
+      thumbnail: "/images/templates/supervision_record.png",
+      category: "HR & Compliance"
+    },
+    {
+      title: "Medication Competency Assessment",
+      description: "Assessment tool to verify staff competency in medication administration, covering policy knowledge and practical skills.",
+      icon: FileText,
+      downloadUrl: "/documents/medication_competency_assessment.pdf",
+      thumbnail: "/images/templates/medication_competency_assessment.png",
+      category: "Medication"
+    },
+    {
+      title: "DBS Risk Assessment",
+      description: "Risk assessment form for staff with positive DBS disclosures or those starting work while waiting for a certificate.",
+      icon: ShieldCheck,
+      downloadUrl: "/documents/dbs_risk_assessment.pdf",
+      thumbnail: "/images/templates/dbs_risk_assessment.png",
+      category: "HR & Compliance"
+    },
+    {
+      title: "Business Continuity Plan",
+      description: "Template for planning responses to emergencies like power failures, severe weather, or staff shortages to ensure service continuity.",
+      icon: ShieldCheck,
+      downloadUrl: "/documents/business_continuity_plan.pdf",
+      thumbnail: "/images/templates/business_continuity_plan.png",
+      category: "Management"
     }
   ];
 
@@ -94,18 +135,21 @@ export default function Resources() {
   const articles = [
     {
       title: "Understanding the CQC Single Assessment Framework",
+      slug: "understanding-cqc-single-assessment-framework",
       excerpt: "A guide to the new CQC assessment approach, focusing on the 5 key questions and 34 quality statements.",
       readTime: "5 min read",
       category: "CQC Updates"
     },
     {
       title: "Top 10 Common CQC Inspection Failures",
+      slug: "top-10-common-cqc-inspection-failures",
       excerpt: "Learn from common mistakes. We analyse the most frequent reasons for 'Requires Improvement' ratings in 2024.",
       readTime: "7 min read",
       category: "Inspection Prep"
     },
     {
       title: "Digital vs Paper: The ROI of Going Digital",
+      slug: "digital-vs-paper-roi-going-digital",
       excerpt: "How switching to digital care planning saves time, reduces errors, and improves staff retention.",
       readTime: "4 min read",
       category: "Digital Transformation"
@@ -191,27 +235,29 @@ export default function Resources() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {articles.map((article, index) => (
-                <article key={index} className="group cursor-pointer">
-                  <div className="rounded-2xl overflow-hidden bg-white border border-border shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
-                    <div className="h-48 bg-slate-200 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 group-hover:scale-105 transition-transform duration-500"></div>
-                      <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium">
-                        {article.category}
+                <Link key={index} href={`/resources/${article.slug}`}>
+                  <article className="group cursor-pointer h-full">
+                    <div className="rounded-2xl overflow-hidden bg-white border border-border shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                      <div className="h-48 bg-slate-200 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 group-hover:scale-105 transition-transform duration-500"></div>
+                        <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium">
+                          {article.category}
+                        </div>
+                      </div>
+                      <div className="p-6 flex-1 flex flex-col">
+                        <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                          {article.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4 flex-1">
+                          {article.excerpt}
+                        </p>
+                        <div className="flex items-center text-sm text-muted-foreground mt-auto">
+                          <span>{article.readTime}</span>
+                        </div>
                       </div>
                     </div>
-                    <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                        {article.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4 flex-1">
-                        {article.excerpt}
-                      </p>
-                      <div className="flex items-center text-sm text-muted-foreground mt-auto">
-                        <span>{article.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+                  </article>
+                </Link>
               ))}
             </div>
           </div>
