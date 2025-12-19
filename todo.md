@@ -53,3 +53,5 @@
 - [ ] Verify definition of "license" in codebase (per user, per location, or per staff member?)
 - [ ] Create `FAQ.tsx` component with questions about licensing, data security, and onboarding
 - [ ] Add FAQ section to `Home.tsx` below Pricing
+- [ ] Create `ContactForm.tsx` component with name, email, and message fields
+- [ ] Add `ContactForm` to `Home.tsx` below FAQ section
