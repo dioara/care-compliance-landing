@@ -12,7 +12,7 @@ export default function Footer() {
               <span>Care Compliance</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Simplifying CQC compliance for UK care businesses. Our comprehensive system helps you manage audits, staff training, and incidents with ease.
+              Simplifying CQC compliance for UK care businesses. Our comprehensive system helps you manage audits, staff compliance, and incidents with ease.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -67,7 +67,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Mail className="h-4 w-4" />
-            <a href="mailto:support@carecompliance.com" className="hover:text-primary transition-colors">support@carecompliance.com</a>
+            <a href="mailto:support@ccms.co.uk" className="hover:text-primary transition-colors">support@ccms.co.uk</a>
           </div>
         </div>
       </div>

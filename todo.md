@@ -20,3 +20,10 @@
 - [ ] Ensure British English spelling is maintained
 - [ ] Change "care homes" to "care businesses" (supported living, domiciliary care, etc.)
 - [ ] Add "Built by Lampstand Consulting Ltd" with link to `https://lampstand.consulting` in Footer
+- [ ] Verify staff compliance features in the codebase (look for specific compliance checks vs training modules)
+- [ ] Replace all mentions of "staff training" with "staff compliance" or specific compliance terms found in code
+- [ ] Update Hero, Features, and Footer components to remove "training" references
+- [ ] Update all URLs to use `ccms.co.uk` instead of `carecompliance.com` or `app.ccms.co.uk` (if applicable for main site links)
+- [ ] Ensure `app.ccms.co.uk` is used for app links (login/register)
+- [ ] Update email addresses to `@ccms.co.uk`
+- [ ] Review all content for British English spelling (e.g., organisation, optimise, programme, centre, licence vs license)

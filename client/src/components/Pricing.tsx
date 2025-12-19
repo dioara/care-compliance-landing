@@ -22,7 +22,7 @@ export default function Pricing() {
               <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Standard License</h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-bold text-foreground">£70</span>
-                <span className="text-muted-foreground">/license/month</span>
+                <span className="text-muted-foreground">/licence/month</span>
               </div>
               <p className="text-sm text-muted-foreground mt-4">
                 Perfect for smaller care businesses getting started with digital compliance.
@@ -34,7 +34,7 @@ export default function Pricing() {
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                   <Check className="h-3 w-3" />
                 </div>
-                <span className="text-sm text-foreground/80">1-5 licenses</span>
+                <span className="text-sm text-foreground/80">1-5 licences</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="h-5 w-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
@@ -61,13 +61,13 @@ export default function Pricing() {
               Volume Discounts
             </div>
             <div className="mb-8">
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Growing Business</h3>
+              <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Growing Organisation</h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-bold text-foreground">£56</span>
-                <span className="text-muted-foreground">/license/month</span>
+                <span className="text-muted-foreground">/licence/month</span>
               </div>
               <p className="text-sm text-green-600 font-medium mt-2">
-                Save up to 20% per license
+                Save up to 20% per licence
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Automatic discounts applied as you grow.
@@ -80,7 +80,7 @@ export default function Pricing() {
                   <Check className="h-3 w-3" />
                 </div>
                 <span className="text-sm text-foreground/80">
-                  <span className="font-semibold">10% off (£63)</span> for 6-10 licenses
+                  <span className="font-semibold">10% off (£63)</span> for 6-10 licences
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -88,7 +88,7 @@ export default function Pricing() {
                   <Check className="h-3 w-3" />
                 </div>
                 <span className="text-sm text-foreground/80">
-                  <span className="font-semibold">15% off (£59.50)</span> for 11-20 licenses
+                  <span className="font-semibold">15% off (£59.50)</span> for 11-20 licences
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -96,7 +96,7 @@ export default function Pricing() {
                   <Check className="h-3 w-3" />
                 </div>
                 <span className="text-sm text-foreground/80">
-                  <span className="font-semibold">20% off (£56)</span> for 21+ licenses
+                  <span className="font-semibold">20% off (£56)</span> for 21+ licences
                 </span>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function Pricing() {
               <h3 className="text-xl font-heading font-semibold text-foreground mb-2">Annual Billing</h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-bold text-foreground">£47.60</span>
-                <span className="text-muted-foreground">/license/mo</span>
+                <span className="text-muted-foreground">/licence/mo</span>
               </div>
               <p className="text-sm text-green-600 font-medium mt-2">
                 Save additional 15%
@@ -157,10 +157,10 @@ export default function Pricing() {
               <span className="text-sm">Need a custom enterprise plan?</span>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href="mailto:sales@carecompliance.com" className="text-primary font-medium hover:underline">Contact our sales team</a>
+                  <a href="mailto:sales@ccms.co.uk" className="text-primary font-medium hover:underline">Contact our sales team</a>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>For organizations with 50+ licenses</p>
+                  <p>For organisations with 50+ licences</p>
                 </TooltipContent>
               </Tooltip>
             </div>

@@ -20,7 +20,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              The all-in-one CQC compliance management system. Streamline audits, manage staff training, and ensure resident safety with confidence.
+              The all-in-one CQC compliance management system. Streamline audits, manage staff compliance, and ensure resident safety with confidence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

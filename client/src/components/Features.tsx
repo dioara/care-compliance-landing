@@ -17,7 +17,7 @@ const features = [
     description: "Access 25+ built-in audit templates covering all CQC domains. Schedule, conduct, and track audits effortlessly.",
     image: "/images/feature-audit.png",
     benefits: [
-      "25+ specialized audit types",
+      "25+ specialised audit types",
       "Automated scheduling & reminders",
       "Evidence upload & digital signatures"
     ]
@@ -36,7 +36,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Real-time Reporting",
-    description: "Visualize compliance status with RAG (Red, Amber, Green) indicators. Generate detailed reports in seconds.",
+    description: "Visualise compliance status with RAG (Red, Amber, Green) indicators. Generate detailed reports in seconds.",
     image: "/images/feature-reporting.png",
     benefits: [
       "Live RAG status dashboard",
@@ -50,7 +50,7 @@ const additionalFeatures = [
   {
     icon: Users,
     title: "Staff Compliance",
-    description: "Track training, supervision, and compliance across 7 key staff domains including recruitment and appraisals."
+    description: "Track employment checks, DBS status, and compliance across 7 key staff domains including recruitment and appraisals."
   },
   {
     icon: FileText,
