@@ -1,6 +1,7 @@
 import json
 import os
 from fpdf import FPDF
+from pdf2image import convert_from_path
 
 # Load template content
 with open('template_content.json', 'r') as f:
@@ -79,6 +80,16 @@ def create_pdf(template):
     filename = f"{output_dir}/{template['id']}.pdf"
     pdf.output(filename)
     print(f"Generated: {filename}")
+
+    # Generate Thumbnail
+    try:
+        images = convert_from_path(filename, first_page=1, last_page=1)
+        if images:
+            thumb_filename = filename.replace('.pdf', '_thumb.jpg')
+            images[0].save(thumb_filename, 'JPEG')
+            print(f"Generated Thumbnail: {thumb_filename}")
+    except Exception as e:
+        print(f"Failed to generate thumbnail for {filename}: {e}")
 
 # Generate all templates
 for template in data['templates']:
