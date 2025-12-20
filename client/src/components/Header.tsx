@@ -30,11 +30,6 @@ export default function Header() {
     } else {
       // Handle standard links (like /resources)
       if (href.startsWith("/")) {
-        // Use wouter navigation for internal links to avoid full reload if possible, 
-        // but window.location.href is safer for mixed anchor/path logic. 
-        // For simplicity and consistency with the anchor logic above, we'll use window.location.href 
-        // or just let the default anchor behavior happen if we didn't preventDefault.
-        // However, the onClick prevents default.
         window.location.href = href;
       } else {
         window.location.href = href;
@@ -86,13 +81,9 @@ export default function Header() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="z-[100] bg-background w-[300px] sm:w-[400px] p-6">
-            <div className="flex flex-col h-full">
-            <div className="flex items-center gap-2 mb-8">
-              <ShieldCheck className="h-6 w-6 text-primary" />
-              <span className="font-heading font-bold text-lg">Care Compliance</span>
-            </div>
-              <nav className="flex flex-col gap-2 flex-1">
+          <SheetContent side="right" className="z-[100] bg-background">
+            <div className="flex flex-col gap-8 mt-8">
+              <nav className="flex flex-col gap-8">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
@@ -101,13 +92,13 @@ export default function Header() {
                       e.preventDefault();
                       scrollToSection(item.href);
                     }}
-                    className="text-lg font-medium text-foreground/80 hover:text-primary py-3 border-b border-border/40 transition-colors"
+                    className="text-lg font-medium text-muted-foreground hover:text-primary"
                   >
                     {item.name}
                   </a>
                 ))}
               </nav>
-              <div className="flex flex-col gap-4 mt-auto pb-8">
+              <div className="flex flex-col gap-4">
                 <Button variant="outline" asChild className="w-full justify-center">
                   <a href="https://app.ccms.co.uk">Log in</a>
                 </Button>
