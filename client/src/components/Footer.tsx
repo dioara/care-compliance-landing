@@ -35,17 +35,17 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li><a href="/#features" className="text-muted-foreground hover:text-primary transition-colors">Features</a></li>
               <li><a href="/#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Updates</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Security</a></li>
+              <li><Link href="/updates" className="text-muted-foreground hover:text-primary transition-colors">Updates</Link></li>
+              <li><Link href="/security" className="text-muted-foreground hover:text-primary transition-colors">Security</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-heading font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/careers" className="text-muted-foreground hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
               <li><a href="/#contact" onClick={(e) => {
                 if (window.location.pathname === '/') {
                   e.preventDefault();
@@ -58,10 +58,10 @@ export default function Footer() {
           <div>
             <h3 className="font-heading font-semibold text-foreground mb-4">Legal</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Acceptable Use</a></li>
+              <li><Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="/cookies" className="text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link></li>
+              <li><Link href="/acceptable-use" className="text-muted-foreground hover:text-primary transition-colors">Acceptable Use</Link></li>
             </ul>
           </div>
         </div>

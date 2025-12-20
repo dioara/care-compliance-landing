@@ -1,277 +1,193 @@
-import { useState } from "react";
-import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, Download, BookOpen, ShieldCheck, CheckCircle, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import LeadCaptureDialog from "@/components/LeadCaptureDialog";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Download, FileText } from "lucide-react";
 
 export default function Resources() {
-  const [selectedTemplate, setSelectedTemplate] = useState<{ title: string; url: string } | null>(null);
-
-  const templates = [
+  const resources = [
+    // New Feedback Forms
     {
-      title: "Hospital Passport Template",
-      description: "A comprehensive document to ensure continuity of care when a service user is admitted to hospital. Includes sections for medical history, communication needs, and personal preferences.",
-      icon: FileText,
-      downloadUrl: "/documents/hospital_passport_template.pdf",
-      thumbnail: "/images/templates/hospital_passport_template.png",
-      category: "Care Management"
+      title: "Staff Feedback Questionnaire",
+      description: "Gather valuable insights from your team about their work environment and support needs.",
+      filename: "Staff_Feedback_Form.pdf",
+      category: "Feedback"
     },
     {
-      title: "Right to Work Checklist",
-      description: "Essential checklist for UK employers to verify staff eligibility. Covers acceptable documents (List A & B) and the 3-step check process to prevent illegal working.",
-      icon: ShieldCheck,
-      downloadUrl: "/documents/right_to_work_checklist.pdf",
-      thumbnail: "/images/templates/right_to_work_checklist.png",
-      category: "HR & Compliance"
+      title: "Service User Feedback Form",
+      description: "Empower residents to share their views on care quality, environment, and activities.",
+      filename: "Service_User_Feedback.pdf",
+      category: "Feedback"
     },
     {
-      title: "Person-Centred Care Plan",
-      description: "CQC-compliant care plan template focusing on individual needs, risks, and goals. Perfect for structuring resident care documentation.",
-      icon: CheckCircle,
-      downloadUrl: "/documents/care_plan_template.pdf",
-      thumbnail: "/images/templates/care_plan_template.png",
-      category: "Care Planning"
+      title: "Family & Friends Feedback",
+      description: "Collect feedback from relatives to ensure holistic satisfaction with your service.",
+      filename: "Family_Friends_Feedback.pdf",
+      category: "Feedback"
     },
     {
-      title: "Risk Assessment Form",
-      description: "Standardised risk assessment template to identify hazards, evaluate risks, and implement control measures for service users or environments.",
-      icon: ShieldCheck,
-      downloadUrl: "/documents/risk_assessment_template.pdf",
-      thumbnail: "/images/templates/risk_assessment_template.png",
-      category: "Safety"
+      title: "Visiting Professional Feedback",
+      description: "Capture external perspectives from healthcare professionals visiting your service.",
+      filename: "Professional_Feedback.pdf",
+      category: "Feedback"
+    },
+    // New Compliance Tools
+    {
+      title: "Fire Safety Checklist",
+      description: "Weekly checklist to ensure all fire safety systems and exits are compliant.",
+      filename: "Fire_Safety_Checklist.pdf",
+      category: "Compliance"
     },
     {
       title: "Infection Control Audit",
-      description: "Comprehensive checklist for auditing infection prevention and control standards, covering hand hygiene, PPE, and environmental cleanliness.",
-      icon: CheckCircle,
-      downloadUrl: "/documents/infection_control_audit.pdf",
-      thumbnail: "/images/templates/infection_control_audit.png",
-      category: "Audits"
+      description: "Comprehensive audit tool for hand hygiene, PPE, and environmental cleanliness.",
+      filename: "Infection_Control_Audit.pdf",
+      category: "Compliance"
     },
     {
-      title: "MAR Chart Template",
-      description: "Medication Administration Record chart for accurate tracking of medication administration, ensuring safety and compliance.",
-      icon: FileText,
-      downloadUrl: "/documents/mar_chart_template.pdf",
-      thumbnail: "/images/templates/mar_chart_template.png",
-      category: "Medication"
+      title: "Complaints Log",
+      description: "Structured log for recording, investigating, and resolving complaints.",
+      filename: "Complaints_Log.pdf",
+      category: "Management"
     },
     {
-      title: "Staff Induction Checklist",
-      description: "Structured induction checklist to ensure new staff receive all necessary training, policy reviews, and introductions during their first weeks.",
-      icon: Users,
-      downloadUrl: "/documents/staff_induction_checklist.pdf",
-      thumbnail: "/images/templates/staff_induction_checklist.png",
-      category: "HR & Compliance"
+      title: "Staff Training Matrix",
+      description: "Track mandatory and role-specific training compliance across your team.",
+      filename: "Training_Matrix.pdf",
+      category: "Management"
+    },
+    // Original Templates
+    {
+      title: "Medication Administration Audit",
+      description: "Ensure safe medication practices with this comprehensive audit tool covering storage, administration, and competency.",
+      filename: "Medication_Audit.pdf",
+      category: "Clinical"
     },
     {
-      title: "Incident Report Form",
-      description: "Formal template for recording accidents and incidents, including details of injuries, witnesses, and immediate actions taken.",
-      icon: ShieldCheck,
-      downloadUrl: "/documents/incident_report_form.pdf",
-      thumbnail: "/images/templates/incident_report_form.png",
+      title: "Care Plan Quality Audit",
+      description: "Review care plans for person-centred content, risk assessments, and mental capacity compliance.",
+      filename: "Care_Plan_Audit.pdf",
+      category: "Clinical"
+    },
+    {
+      title: "Daily Infection Control Spot Check",
+      description: "Quick daily check for cleanliness, PPE availability, and staff hygiene practices.",
+      filename: "Infection_Control_Spot_Check.pdf",
+      category: "Compliance"
+    },
+    {
+      title: "Health & Safety Walkaround",
+      description: "Monthly environmental check covering hazards, maintenance, and general safety.",
+      filename: "Health_Safety_Audit.pdf",
       category: "Safety"
     },
     {
-      title: "Spot Check Record",
-      description: "Template for conducting unannounced spot checks on staff performance, covering dignity, safety, and adherence to care plans.",
-      icon: CheckCircle,
-      downloadUrl: "/documents/spot_check_record.pdf",
-      thumbnail: "/images/templates/spot_check_record.png",
-      category: "Quality Assurance"
+      title: "Kitchen & Food Safety Audit",
+      description: "Monitor kitchen hygiene, food storage temperatures, and cleaning schedules.",
+      filename: "Kitchen_Audit.pdf",
+      category: "Safety"
     },
     {
-      title: "Supervision Record",
-      description: "Formal record for staff supervision sessions, including discussion points, actions agreed, and performance feedback.",
-      icon: Users,
-      downloadUrl: "/documents/supervision_record.pdf",
-      thumbnail: "/images/templates/supervision_record.png",
-      category: "HR & Compliance"
+      title: "Staff Personnel File Audit",
+      description: "Verify recruitment checks, DBS status, and mandatory training records for staff.",
+      filename: "Staff_File_Audit.pdf",
+      category: "HR"
+    },
+    {
+      title: "Resident Room Monthly Check",
+      description: "Ensure resident rooms are clean, safe, and personalised to their needs.",
+      filename: "Resident_Room_Check.pdf",
+      category: "Care"
+    },
+    {
+      title: "Night Shift Safety Check",
+      description: "Protocol for night staff to ensure building security and resident safety.",
+      filename: "Night_Shift_Check.pdf",
+      category: "Safety"
+    },
+    {
+      title: "Manager's Daily Spot Check",
+      description: "A quick overview tool for managers to assess the general state of the service.",
+      filename: "Spot_Check_Form.pdf",
+      category: "Management"
+    },
+    {
+      title: "Staff Supervision Record",
+      description: "Template for recording formal supervision sessions, actions, and wellbeing checks.",
+      filename: "Supervision_Record.pdf",
+      category: "HR"
     },
     {
       title: "Medication Competency Assessment",
-      description: "Assessment tool to verify staff competency in medication administration, covering policy knowledge and practical skills.",
-      icon: FileText,
-      downloadUrl: "/documents/medication_competency_assessment.pdf",
-      thumbnail: "/images/templates/medication_competency_assessment.png",
-      category: "Medication"
+      description: "Tool to assess and verify staff competency in administering medication.",
+      filename: "Medication_Competency.pdf",
+      category: "Clinical"
     },
     {
-      title: "DBS Risk Assessment",
-      description: "Risk assessment form for staff with positive DBS disclosures or those starting work while waiting for a certificate.",
-      icon: ShieldCheck,
-      downloadUrl: "/documents/dbs_risk_assessment.pdf",
-      thumbnail: "/images/templates/dbs_risk_assessment.png",
-      category: "HR & Compliance"
+      title: "Positive DBS Risk Assessment",
+      description: "Framework for assessing risks associated with positive DBS disclosures.",
+      filename: "DBS_Risk_Assessment.pdf",
+      category: "HR"
     },
     {
       title: "Business Continuity Plan",
-      description: "Template for planning responses to emergencies like power failures, severe weather, or staff shortages to ensure service continuity.",
-      icon: ShieldCheck,
-      downloadUrl: "/documents/business_continuity_plan.pdf",
-      thumbnail: "/images/templates/business_continuity_plan.png",
+      description: "Template for planning responses to emergencies like power failure or flood.",
+      filename: "Business_Continuity_Plan.pdf",
       category: "Management"
     }
   ];
 
-  const handleDownloadClick = (template: typeof templates[0]) => {
-    setSelectedTemplate({ title: template.title, url: template.downloadUrl });
-  };
-
-  const handleDownloadSuccess = () => {
-    if (selectedTemplate) {
-      const link = document.createElement('a');
-      link.href = selectedTemplate.url;
-      link.download = selectedTemplate.url.split('/').pop() || 'download';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-  };
-
-  const articles = [
-    {
-      title: "Understanding the CQC Single Assessment Framework",
-      slug: "understanding-cqc-single-assessment-framework",
-      excerpt: "A guide to the new CQC assessment approach, focusing on the 5 key questions and 34 quality statements.",
-      readTime: "5 min read",
-      category: "CQC Updates"
-    },
-    {
-      title: "Top 10 Common CQC Inspection Failures",
-      slug: "top-10-common-cqc-inspection-failures",
-      excerpt: "Learn from common mistakes. We analyse the most frequent reasons for 'Requires Improvement' ratings in 2024.",
-      readTime: "7 min read",
-      category: "Inspection Prep"
-    },
-    {
-      title: "Digital vs Paper: The ROI of Going Digital",
-      slug: "digital-vs-paper-roi-going-digital",
-      excerpt: "How switching to digital care planning saves time, reduces errors, and improves staff retention.",
-      readTime: "4 min read",
-      category: "Digital Transformation"
-    }
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background font-sans antialiased">
       <Header />
       
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section className="py-20 bg-slate-50">
-          <div className="container text-center max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Compliance <span className="text-gradient">Resources</span>
+      <main className="pt-24 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-heading font-bold tracking-tight text-foreground sm:text-5xl mb-4">
+              Compliance Resources
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Free templates, guides, and articles to help your care business stay compliant and deliver outstanding care.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Free templates, checklists, and tools to help you maintain CQC compliance.
             </p>
           </div>
-        </section>
 
-        {/* Templates Section */}
-        <section className="py-20">
-          <div className="container">
-            <div className="flex items-center gap-3 mb-12">
-              <div className="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center text-primary">
-                <Download className="h-6 w-6" />
-              </div>
-              <h2 className="text-3xl font-heading font-bold">Free Templates</h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {templates.map((template, index) => (
-                <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                  <div className="h-48 bg-slate-100 relative group overflow-hidden border-b border-border/50">
-                    <img 
-                      src={template.thumbnail} 
-                      alt={`${template.title} Preview`} 
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                    <div className="absolute top-3 left-3">
-                      <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-foreground shadow-sm">
-                        {template.category}
-                      </span>
-                    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {resources.map((resource, index) => (
+              <Card key={index} className="flex flex-col h-full border-border/50 shadow-sm hover:shadow-md transition-shadow">
+                <div className="aspect-video w-full bg-muted/30 relative overflow-hidden border-b border-border/50">
+                  <img 
+                    src={`/documents/${resource.filename.replace('.pdf', '_thumb.jpg')}`} 
+                    alt={resource.title}
+                    className="object-cover w-full h-full opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <div className="absolute top-2 right-2">
+                    <span className="bg-background/80 backdrop-blur-sm text-xs font-medium px-2 py-1 rounded-full border border-border/50">
+                      {resource.category}
+                    </span>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-xl">
-                      <template.icon className="h-5 w-5 text-primary shrink-0" />
-                      {template.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col">
-                    <CardDescription className="text-base mb-6 flex-1">
-                      {template.description}
-                    </CardDescription>
-                    <Button 
-                      className="w-full gap-2" 
-                      onClick={() => handleDownloadClick(template)}
-                    >
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-heading text-xl">{resource.title}</CardTitle>
+                  <CardDescription className="line-clamp-2">
+                    {resource.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className="mt-auto pt-0">
+                  <Button asChild className="w-full gap-2" variant="outline">
+                    <a href={`/documents/${resource.filename}`} download>
                       <Download className="h-4 w-4" />
                       Download PDF
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    </a>
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
-        </section>
-
-        {/* Articles Section */}
-        <section className="py-20 bg-slate-50">
-          <div className="container">
-            <div className="flex items-center gap-3 mb-12">
-              <div className="h-10 w-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
-                <BookOpen className="h-6 w-6" />
-              </div>
-              <h2 className="text-3xl font-heading font-bold">Latest Articles</h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {articles.map((article, index) => (
-                <Link key={index} href={`/resources/${article.slug}`}>
-                  <article className="group cursor-pointer h-full">
-                    <div className="rounded-2xl overflow-hidden bg-white border border-border shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
-                      <div className="h-48 bg-slate-200 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 group-hover:scale-105 transition-transform duration-500"></div>
-                        <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium">
-                          {article.category}
-                        </div>
-                      </div>
-                      <div className="p-6 flex-1 flex flex-col">
-                        <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                          {article.title}
-                        </h3>
-                        <p className="text-muted-foreground mb-4 flex-1">
-                          {article.excerpt}
-                        </p>
-                        <div className="flex items-center text-sm text-muted-foreground mt-auto">
-                          <span>{article.readTime}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
       </main>
 
       <Footer />
-      
-      <LeadCaptureDialog 
-        isOpen={!!selectedTemplate}
-        onClose={() => setSelectedTemplate(null)}
-        onSuccess={handleDownloadSuccess}
-        resourceTitle={selectedTemplate?.title || ""}
-      />
     </div>
   );
 }

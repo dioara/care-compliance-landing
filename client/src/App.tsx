@@ -8,6 +8,15 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Resources from "./pages/Resources";
 import Article from "./pages/Article";
+import About from "./pages/About";
+import Careers from "./pages/Careers";
+import Blog from "./pages/Blog";
+import Updates from "./pages/Updates";
+import Security from "./pages/Security";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Cookies from "./pages/Cookies";
+import AcceptableUse from "./pages/AcceptableUse";
 
 
 
@@ -17,6 +26,15 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path="/resources" component={Resources} />
       <Route path="/resources/:slug" component={Article} />
+      <Route path="/about" component={About} />
+      <Route path="/careers" component={Careers} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/updates" component={Updates} />
+      <Route path="/security" component={Security} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/cookies" component={Cookies} />
+      <Route path="/acceptable-use" component={AcceptableUse} />
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
