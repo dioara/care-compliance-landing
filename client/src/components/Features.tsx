@@ -113,12 +113,12 @@ export default function Features() {
                 </ul>
               </div>
               <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border/50 bg-slate-50 aspect-[4/3] group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-none border-none bg-transparent aspect-[4/3] flex items-center justify-center">
+                  
                   <img 
                     src={feature.image} 
                     alt={feature.title} 
-                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain p-8"
                   />
                 </div>
               </div>

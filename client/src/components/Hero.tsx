@@ -52,11 +52,11 @@ export default function Hero() {
           <div className="relative lg:h-[600px] flex items-center justify-center animate-fade-in-left delay-200">
             <div className="relative w-full max-w-[600px] aspect-[4/3]">
               {/* Abstract background shapes */}
-              <div className="absolute -top-20 -right-20 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-green-200/30 rounded-full blur-3xl"></div>
+              
+              
               
               {/* Main Hero Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50 glass-card transform transition-transform hover:scale-[1.02] duration-500">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/50 glass-card">
                 <img 
                   src="/images/dashboard-hero-sharp.png" 
                   alt="Care Compliance Dashboard" 
