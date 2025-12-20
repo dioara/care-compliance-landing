@@ -10,7 +10,7 @@ export default function Resources() {
     {
       title: "Staff Feedback Questionnaire",
       description: "Gather valuable insights from your team about their work environment and support needs.",
-      filename: "Staff_Feedback_Form.pdf",
+      filename: "form-staff-feedback.pdf",
       category: "Feedback"
     },
     {
@@ -41,7 +41,7 @@ export default function Resources() {
     {
       title: "Infection Control Audit",
       description: "Comprehensive audit tool for hand hygiene, PPE, and environmental cleanliness.",
-      filename: "Infection_Control_Audit.pdf",
+      filename: "audit-infection-control.pdf",
       category: "Compliance"
     },
     {
@@ -60,13 +60,13 @@ export default function Resources() {
     {
       title: "Medication Administration Audit",
       description: "Ensure safe medication practices with this comprehensive audit tool covering storage, administration, and competency.",
-      filename: "Medication_Audit.pdf",
+      filename: "audit-medication.pdf",
       category: "Clinical"
     },
     {
       title: "Care Plan Quality Audit",
       description: "Review care plans for person-centred content, risk assessments, and mental capacity compliance.",
-      filename: "Care_Plan_Audit.pdf",
+      filename: "audit-care-plan.pdf",
       category: "Clinical"
     },
     {
