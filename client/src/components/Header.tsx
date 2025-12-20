@@ -30,6 +30,11 @@ export default function Header() {
     } else {
       // Handle standard links (like /resources)
       if (href.startsWith("/")) {
+        // Use wouter navigation for internal links to avoid full reload if possible, 
+        // but window.location.href is safer for mixed anchor/path logic. 
+        // For simplicity and consistency with the anchor logic above, we'll use window.location.href 
+        // or just let the default anchor behavior happen if we didn't preventDefault.
+        // However, the onClick prevents default.
         window.location.href = href;
       } else {
         window.location.href = href;
@@ -83,7 +88,7 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="right" className="z-[100] bg-background">
             <div className="flex flex-col gap-8 mt-8">
-              <nav className="flex flex-col gap-8">
+              <nav className="flex flex-col gap-6">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
