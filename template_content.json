@@ -1,0 +1,242 @@
+{
+  "templates": [
+    {
+      "id": "audit-infection-control",
+      "title": "Infection Prevention and Control (IPC) Audit Tool",
+      "category": "Safety & Hygiene",
+      "description": "A comprehensive monthly audit tool to ensure compliance with the Health and Social Care Act 2008: Code of Practice on the prevention and control of infections. Covers environment, hand hygiene, PPE, and waste management.",
+      "sections": [
+        {
+          "title": "1. General Environment & Cleanliness",
+          "items": [
+            "Are all areas of the home visibly clean, dust-free, and free from clutter?",
+            "Are floors, walls, and ceilings in good repair and easy to clean (impervious surfaces)?",
+            "Is lighting adequate in all areas to allow for effective cleaning and inspection?",
+            "Are radiators and pipework covered and clean to prevent dust accumulation and burn risks?",
+            "Are furniture and soft furnishings (chairs, curtains) clean, intact, and made of wipeable materials where appropriate?"
+          ]
+        },
+        {
+          "title": "2. Hand Hygiene Facilities",
+          "items": [
+            "Are dedicated hand wash basins available in all clinical areas, sluice rooms, and kitchens?",
+            "Is liquid soap available at all hand wash basins (wall-mounted dispensers)?",
+            "Are paper towels available in wall-mounted dispensers at all hand wash basins?",
+            "Are foot-operated waste bins provided for paper towel disposal?",
+            "Are hand hygiene posters displayed at all hand wash stations?"
+          ]
+        },
+        {
+          "title": "3. Personal Protective Equipment (PPE)",
+          "items": [
+            "Is a sufficient supply of disposable aprons and gloves available in all care areas?",
+            "Are PPE dispensers clean, stocked, and accessible?",
+            "Are staff observed using PPE correctly (donning and doffing procedures)?",
+            "Is eye protection and fluid-repellent masks available for procedures with splash risk?"
+          ]
+        },
+        {
+          "title": "4. Waste Management",
+          "items": [
+            "Are waste bins colour-coded correctly (e.g., clinical, domestic, recycling)?",
+            "Are sharps bins assembled correctly, not overfilled (below fill line), and signed/dated?",
+            "Is the external waste storage area secure, clean, and pest-free?",
+            "Are waste transfer notes retained and up-to-date?"
+          ]
+        },
+        {
+          "title": "5. Laundry & Linen Management",
+          "items": [
+            "Is infected/soiled linen segregated into water-soluble (red) bags at the point of generation?",
+            "Is clean linen stored in a dedicated, clean, dry area off the floor?",
+            "Does the laundry room have a dirty-to-clean flow to prevent cross-contamination?",
+            "Are staff handling linen wearing appropriate PPE?"
+          ]
+        }
+      ],
+      "scoring": "Yes = 1, No = 0. Total Score / Total Applicable Items * 100 = Compliance %"
+    },
+    {
+      "id": "audit-medication",
+      "title": "Medication Management & Administration Audit",
+      "category": "Clinical Safety",
+      "description": "A detailed audit to verify safe management of medicines in line with NICE guidelines (SC1) and CQC Regulation 12. Covers storage, administration, records (MAR charts), and controlled drugs.",
+      "sections": [
+        {
+          "title": "1. Storage & Security",
+          "items": [
+            "Is the medication room/cupboard locked when not in use?",
+            "Is the medication fridge temperature recorded daily (range 2-8°C)?",
+            "Are Controlled Drugs (CDs) stored in a compliant CD cabinet?",
+            "Are keys kept securely by authorised staff only?",
+            "Are open dates recorded on liquids, creams, and eye drops?"
+          ]
+        },
+        {
+          "title": "2. Administration Records (MAR Charts)",
+          "items": [
+            "Is there a photograph of the resident on the MAR chart?",
+            "Are allergies clearly recorded (or 'No Known Allergies' stated)?",
+            "Are all doses signed for immediately after administration?",
+            "Are codes used correctly for non-administration (e.g., refused, hospitalised)?",
+            "Are handwritten entries signed and witnessed by a second staff member?"
+          ]
+        },
+        {
+          "title": "3. Controlled Drugs (CDs)",
+          "items": [
+            "Is the CD register accurate and up-to-date?",
+            "Are CD balances checked and recorded at shift handovers?",
+            "Are two signatures present for all CD administration and receipt?",
+            "Is the disposal of CDs witnessed and recorded correctly?"
+          ]
+        },
+        {
+          "title": "4. Staff Competency",
+          "items": [
+            "Have all staff administering medication completed annual competency assessments?",
+            "Is there a list of staff authorised to administer medication?",
+            "Are staff aware of the procedure for reporting medication errors?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audit-care-plan",
+      "title": "Person-Centred Care Plan Audit",
+      "category": "Care Quality",
+      "description": "Ensures care plans are personalised, up-to-date, and compliant with CQC Regulation 9 (Person-centred care). Reviews assessment, consent, and review processes.",
+      "sections": [
+        {
+          "title": "1. Personal Details & Consent",
+          "items": [
+            "Is the resident's preferred name and life history recorded?",
+            "Is there evidence of consent to care and treatment (signed by resident or best interest decision)?",
+            "Are Next of Kin / Power of Attorney details current?",
+            "Is the DNACPR status clearly documented and valid?"
+          ]
+        },
+        {
+          "title": "2. Assessment of Needs",
+          "items": [
+            "Are baseline assessments completed (MUST, Waterlow, Falls Risk, Moving & Handling)?",
+            "Are assessments reviewed monthly or when needs change?",
+            "Do assessments clearly identify risks and control measures?"
+          ]
+        },
+        {
+          "title": "3. Care Planning",
+          "items": [
+            "Are care plans written in the first person ('I prefer...')?",
+            "Do care plans address all identified needs (e.g., mobility, nutrition, communication)?",
+            "Are goals specific, measurable, and realistic?",
+            "Is there evidence of resident/family involvement in care planning?"
+          ]
+        },
+        {
+          "title": "4. Review & Evaluation",
+          "items": [
+            "Are monthly reviews completed and meaningful (not just 'no change')?",
+            "Do daily notes reflect the care plan interventions?",
+            "Has the care plan been updated following any incidents or hospital admissions?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "form-staff-feedback",
+      "title": "Staff Feedback & Satisfaction Survey",
+      "category": "HR & Leadership",
+      "description": "A confidential survey to gather staff views on leadership, support, and safety culture. Supports CQC Regulation 17 (Good governance) and Well-led key question.",
+      "sections": [
+        {
+          "title": "1. Leadership & Support",
+          "items": [
+            "Do you feel supported by the management team?",
+            "Are you comfortable raising concerns about care quality or safety?",
+            "Do you receive regular supervision and appraisals?",
+            "Is communication from management clear and timely?"
+          ]
+        },
+        {
+          "title": "2. Training & Development",
+          "items": [
+            "Do you feel you have the necessary training to do your job effectively?",
+            "Are you given opportunities for professional development?",
+            "Is the induction process for new staff effective?"
+          ]
+        },
+        {
+          "title": "3. Work Environment & Safety",
+          "items": [
+            "Do you have access to the equipment you need (e.g., hoists, PPE)?",
+            "Is the staffing level adequate to meet residents' needs?",
+            "Do you feel safe at work?",
+            "Are you aware of the whistleblowing policy?"
+          ]
+        },
+        {
+          "title": "4. General Satisfaction",
+          "items": [
+            "Would you recommend this home as a place to work?",
+            "Would you recommend this home to a friend or relative for care?",
+            "What is one thing we could do to improve?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checklist-cqc-inspection",
+      "title": "CQC Inspection Readiness Checklist",
+      "category": "Compliance Management",
+      "description": "A master checklist to prepare for a CQC inspection. Covers the 5 Key Questions (Safe, Effective, Caring, Responsive, Well-led) and essential evidence gathering.",
+      "sections": [
+        {
+          "title": "1. Safe",
+          "items": [
+            "Are safeguarding logs up-to-date and notifications sent to CQC?",
+            "Are staffing rotas available for the last 3 months?",
+            "Are recruitment files complete (DBS, references, gaps in employment)?",
+            "Are building safety certificates current (Gas, Fire, Legionella, Electrical)?"
+          ]
+        },
+        {
+          "title": "2. Effective",
+          "items": [
+            "Are staff training matrices up-to-date (mandatory training)?",
+            "Are DoLS applications and authorisations recorded?",
+            "Are dietary needs and fluid charts being monitored effectively?",
+            "Is there evidence of multi-disciplinary team (MDT) involvement?"
+          ]
+        },
+        {
+          "title": "3. Caring",
+          "items": [
+            "Are residents treated with dignity and respect (observations)?",
+            "Are resident meetings held regularly and minutes available?",
+            "Is there a compliment folder available for inspection?",
+            "Are privacy screens/curtains used appropriately?"
+          ]
+        },
+        {
+          "title": "4. Responsive",
+          "items": [
+            "Is the complaints procedure displayed and accessible?",
+            "Are complaints investigated and responded to within timeframes?",
+            "Are activities schedules displayed and evidence of participation recorded?",
+            "Are end-of-life care plans in place where appropriate?"
+          ]
+        },
+        {
+          "title": "5. Well-led",
+          "items": [
+            "Is the Statement of Purpose up-to-date?",
+            "Are quality assurance audits completed and actions tracked?",
+            "Is the Registered Manager in post and visible?",
+            "Are policies and procedures reviewed annually?"
+          ]
+        }
+      ]
+    }
+  ]
+}
