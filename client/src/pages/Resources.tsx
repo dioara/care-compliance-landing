@@ -6,6 +6,62 @@ import { Download, FileText } from "lucide-react";
 
 export default function Resources() {
   const resources = [
+  {
+    title: "Staff Training Matrix",
+    description: "Excel spreadsheet to track mandatory training expiry dates with automated RAG (Red/Amber/Green) status alerts.",
+    category: "HR & Training",
+    format: "XLSX",
+    filename: "matrix-staff-training.xlsx",
+    thumbnail: "/documents/matrix-staff-training_thumb.jpg"
+  },
+  {
+    title: "Medication Stock Log",
+    description: "Inventory management log for tracking received, administered, and disposed medications with running totals.",
+    category: "Medication",
+    format: "XLSX",
+    filename: "log-medication-stock.xlsx",
+    thumbnail: "/documents/log-medication-stock_thumb.jpg"
+  },
+  {
+    title: "Master Cleaning Schedule",
+    description: "Weekly and monthly cleaning rotas with sign-off grids for all care home areas.",
+    category: "Infection Control",
+    format: "XLSX",
+    filename: "schedule-cleaning.xlsx",
+    thumbnail: "/documents/schedule-cleaning_thumb.jpg"
+  },
+  {
+    title: "Staff Rota Template",
+    description: "4-week rolling rota planner with automatic hours calculation and staffing level checks.",
+    category: "HR & Training",
+    format: "XLSX",
+    filename: "rota-staff-schedule.xlsx",
+    thumbnail: "/documents/rota-staff-schedule_thumb.jpg"
+  },
+  {
+    title: "Manager's KPI Dashboard",
+    description: "Monthly quality assurance dashboard for tracking falls, infections, occupancy, and complaints.",
+    category: "Management",
+    format: "XLSX",
+    filename: "audit-kpi-dashboard.xlsx",
+    thumbnail: "/documents/audit-kpi-dashboard_thumb.jpg"
+  },
+  {
+    title: "Safeguarding Adults Policy",
+    description: "Comprehensive model policy aligned with the Care Act 2014 and CQC Regulation 13.",
+    category: "Policies",
+    format: "PDF",
+    filename: "policy-safeguarding.pdf",
+    thumbnail: "/documents/policy-safeguarding_thumb.jpg"
+  },
+  {
+    title: "Incident & Accident Report",
+    description: "Standardised reporting form with sections for immediate action, witness statements, and root cause analysis.",
+    category: "Safety",
+    format: "PDF",
+    filename: "form-incident-report.pdf",
+    thumbnail: "/documents/form-incident-report_thumb.jpg"
+  },
     // New Feedback Forms
     {
       title: "Staff Feedback Questionnaire",
