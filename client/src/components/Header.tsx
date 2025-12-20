@@ -86,9 +86,9 @@ export default function Header() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
+          <SheetContent side="right" className="z-[100] bg-background">
             <div className="flex flex-col gap-8 mt-8">
-              <nav className="flex flex-col gap-4">
+              <nav className="flex flex-col gap-6">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
